@@ -2,6 +2,8 @@
 
 This is a modification of the FlyPi platform for imaging experiments (https://github.com/amchagas/Flypi original article: http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.2002702)
 
+The RPi controls the camera and LED illumination (optogenetics, Campari and white and IR illumination), making an aditional Arduino microcontroller unnecessary. 
+
 INSTALLATION
 
 copy all files, except Flypi.desktop, in a folder somewhere in your disc.
