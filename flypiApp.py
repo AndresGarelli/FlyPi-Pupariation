@@ -13,7 +13,7 @@ except ImportError:
     print ("serial module not available!")
     print ("user interface will not control flypi!")
 
-#global var2
+
 var2 = 0
 
 class App:
@@ -405,11 +405,10 @@ class flypiApp:
             self.quit.quit()
             GPIO.cleanup()
             
-#        self.qLabel=tk.Label(master=parent,text="exit program")
-#        self.qLabel.pack(side=tk.LEFT)
+
         self.quit = tk.Button(master=parent, text="EXIT PROGRAM",
                               fg="red", command=quitNcloseSerial)
-#        self.quit.pack(side=tk.LEFT)
+
         self.quit.pack(fill="both")
 
         return
@@ -454,93 +453,7 @@ class flypiApp:
 
 
 
-#    def test_rec(self):
-#        #print(self.Protocol.protallcalls)
-#        if len(self.Protocol.protallcalls)>0:
-#            #print(self.Protocol.protallcalls)
-#            if self.Protocol.protallcalls[0]=="1":
-#                self.Protocol.protallcalls=list()
-#                commList,camFlag,recTime = self.Protocol.run_protocol()
-#                if camFlag==1:
-#                    folderPath = self.basePath+"/videos/test/"
-#                    timenow = time.strftime('%Y-%m-%d-%H-%M-%S')
-#                    recFileName = 'video_'+ timenow + '.h264'
-#                    #print(self.basePath)
-#                    self.create_folder(folderPath=self.basePath,
-#                                  folderName="videos/test")
-#                    #self.create_file(filePath = self.basePath+"/videos/",
-#                    #       fileName = recFileName)
-#                    self.Camera.cam.resolution = (1920, 1080)
-#                    if self.Camera.FPSVar.get()<30:
-#                        self.Camera.FPSVar.set(30)
-#                    self.Camera.cam.start_preview()
-#
-#                    self.Camera.cam.preview.fullscreen = False
-#                    self.Camera.cam.start_recording(output = folderPath+\
-#                                                    recFileName,
-#                                                    format = "h264",)
-#                    self.Camera.cam.wait_recording(float(recTime))
-#
-#                for call in commList:
-#                    self.ser.write(call.encode("utf-8"))
-#                    temp = self.lockwait(waitString="<wtd>>")
-#                if camFlag==1:
-#
-#                    self.Camera.cam.wait_recording(1.0)
-#                    self.Camera.cam.stop_recording()
-#                camFlag=0
-#                print("protocol done")
-#
-#
-#
-#
-#
-#
-#
-#
-#        else:
-#            test = list()
-#            #if usedClasses["ring"]==1:
-#            if self.ringFlag==1:
-#                test = test + self.Ring.update()
-#                test = test + self.Ring.ringallcalls[:]
-#                self.Ring.ringallcalls = list()
-#            if self.led1Flag==1:
-#
-#                test = test + self.LED1.ledallcalls[:]
-#                self.LED1.ledallcalls=list()
-#            if self.led2Flag==1:
-#                test = test + self.LED2.ledallcalls[:]
-#                self.LED2.ledallcalls=list()
-#
-#            if self.peltierFlag==1:
-#                test = test + self.Peltier.peltierallcalls[:]
-#                test = test + [self.Peltier.peltGetTempArd()]
-#                test = test + [self.Peltier.peltSetTemp()]
-#                self.Peltier.peltierallcalls=list()
-#            if len(test)>0:
-#                for call in test:
-#                    #print(call.encode("utf-8"))
-#
-#                    self.ser.write(call.encode("utf-8"))
-#                    temp = self.lockwait(waitString="<wtd>>")
-#                    if len(temp)>0:
-#                        self.Peltier.peltTempArd.set(temp[0])
-#                        if self.Peltier.logTemp.get() == 1:
-#                            self.create_folder(folderPath = self.basePath,
-#                                      folderName = "log_temp")
-#                            fh = self.create_file(filePath = self.basePath+"log_temp/",
-#                            fileName = "temp_log_"+time.strftime('%Y-%m-%d')+".txt")
-#                            fh.write(time.strftime('%Y-%m-%d-%H-%M-%S') + (','))
-#                            fh.write(temp[0][2:7]+(',\r\n'))
-#
-#
-#
-#
-#
-#        self.frame.after(100, self.test_rec)
-#
-#        return
+
 
 
     def create_folder(self,
