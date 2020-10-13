@@ -6,16 +6,8 @@ The RPi controls the camera and LED illumination (optogenetics, Campari and whit
 
 FlyPi and FlyPi-pupariation had been designed for and tested in Raspberry Pi 3 and 4 running Raspberry Pi OS.
 
-All the files required to run FlyPi-pupariation are contained in one single compressed file:
-Camera.py
-CAMPARI.py
-FlyPi.desktop
-flypiApp.py
-Illumination.py
-Optogenetic.py
-run.py
-README
-
+Download all the files as a single zip file clicking on the green "Code" button on the right hand side of the main page.
+That file will also contain an example video of Drosophila larvae expressing GCAMP in muscle cells.
 
 INSTALLATION
 
@@ -23,15 +15,13 @@ The installation of FlyPi is straightforward and should take no more than 5-10 m
 
 1- Install the picamera and w1thermsensor packages usign apt in a terminal window with the following commands:
 
-sudo apt-get update
-sudo apt-get install python3-picamera
-sudo apt-get install python3-w1thermsensor
+- sudo apt-get update
+- sudo apt-get install python3-picamera
+- sudo apt-get install python3-w1thermsensor
 
 2- Copy all files, except Flypi.desktop, in a folder somewhere in your disc.
 
-3- Copy Flypi.desktop in the desktop. Open Flypi.desktop in text editor and modify accordingly:
-
-[Desktop Entry] Name=FlyPi Comment= FlyPi will control the camera and LEDs Icon=/usr/share/pixmaps/openbox.xpm (you should indicate here the path to some image) Exec=/home/pi/Desktop/Flypi-master/Python/run.py (indicate the path to the file "run.py") Type=Application Encoding=UTF-8 Terminal=false Categories=None;
+3- Copy Flypi.desktop in the desktop. Open Flypi.desktop in text editor and modify the line reading Exec=/home/pi/Desktop/Flypi-master/Python/run.py to indicate the path to the file "run.py" in your RPi.
 
 You need to make run.py executable. Open terminal, go to the folder where you placed run.py and write sudo chmod +x run.py
 
