@@ -24,7 +24,7 @@ class App:
         frame.pack()
 
         self.var = IntVar()
-        self.c = Checkbutton(frame, text="Use CAMPARI setup", variable=self.var, command=self.setup)
+        self.c = Checkbutton(frame, text="Check box to use CAMPARI setup or\n leave unchecked for standard setup", variable=self.var, command=self.setup)
         self.var.set(0)
         self.c.pack()
         
