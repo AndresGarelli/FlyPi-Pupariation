@@ -1,4 +1,4 @@
-Please have a look at https://github.com/AndresGarelli/Larva_Tracking_python for a new code that records and tracks larval behavior simultaneously.
+Please have a look at https://github.com/AndresGarelli/Larva_Tracking_OpenCV for a new code that simultaneously records and tracks larval behavior.
 
 
 This is a modification of FlyPi, a Raspberry Pi based platform for imaging experiments (https://github.com/amchagas/Flypi original article: http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.2002702)
